@@ -1,3 +1,6 @@
 {
-  "item.jbstone.fine_pebble": "Fine Pebble"
+  "item.jbstone.fine_pebble": "Fine Pebble",
+  "item.jbstone.pebble": "Pebble",
+  "block.jbstone.large_pebble": "Large Pebble",
+  "block.jbstone.purple_wool_stairs": "Purple Wool Stairs"
 }

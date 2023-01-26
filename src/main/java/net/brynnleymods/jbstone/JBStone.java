@@ -1,6 +1,7 @@
 package net.brynnleymods.jbstone;
 
 import com.mojang.logging.LogUtils;
+import net.brynnleymods.jbstone.block.ModBlocks;
 import net.brynnleymods.jbstone.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -34,6 +35,8 @@ public class JBStone
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
+
 
         eventBus.addListener(this::setup);
 
