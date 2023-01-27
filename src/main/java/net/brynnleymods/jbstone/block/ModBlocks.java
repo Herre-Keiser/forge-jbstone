@@ -6,9 +6,11 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,6 +31,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
             () -> new StairBlock(PURPLE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(PURPLE_WOOL) ), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    public static final RegistryObject<Block> PURPLE_WOOL_PRESSURE_PLATE = registerBlock("purple_wool_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(PURPLE_WOOL).noCollission() ), CreativeModeTab.TAB_REDSTONE);
+// no models, only actual block added!
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
 
     RegistryObject<T> toReturn = BLOCKS.register(name, block);
